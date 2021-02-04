@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import { GlobalStyles } from './global-styles';
 import { App } from './app';
 import { FirebaseContext } from './context/firebase';
+//
+import firebase from "firebase/app";
+import "firebase/auth";
 
 //const clientID = process.env.REACT_APP_UNSPLASH4GOD_API_KEY;
 
@@ -28,19 +31,13 @@ const config = {
 //     document.getElementById('root')
 // );
 
-const firebase = window.firebase.initializeApp(config);
+//const firebase = window.firebase.initializeApp(config);
+const Firebase = firebase.initializeApp(config);
 
 ReactDOM.render(
-    <FirebaseContext.Provider value={{ firebase: window.firebase }}>
+    <FirebaseContext.Provider value={{ firebase: firebase }}>
         <GlobalStyles />
         <App />
-    </FirebaseContext.Provider>, 
+    </FirebaseContext.Provider>,
     document.getElementById('root')
 );
-
-
-
-
-
-
-

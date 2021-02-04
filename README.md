@@ -6,7 +6,8 @@ Ref: https://medium.com/@shihKai/%E4%BB%8B%E7%B4%B9%E6%92%B0%E5%AF%ABreact-css%E
 Something need to learn:  
 1. jumbotron  
 2. react-router-dom  
-3. styled-components  
+3. styled-components
+4. Firebase  
 
 
 # title(){
