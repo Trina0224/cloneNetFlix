@@ -7,7 +7,11 @@ Something need to learn:
 1. jumbotron  
 2. react-router-dom  
 3. styled-components
-4. Firebase  
+4. Firebase
+
+MEMO:  
+37, 38, 39 are not working because Firebase. Not a big problem. Just remember to put it back.  
+ 
 
 
 # title(){
