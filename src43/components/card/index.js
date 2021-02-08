@@ -23,7 +23,7 @@ const FeatureContext = createContext();
 export default function Card({ children, ...restProps }) {
     const [showFeature, setShowFeature] = useState(false);
     const [itemFeature, setItemFeature] = useState(false);
-
+    
     return (
       <FeatureContext.Provider value={{ showFeature, setShowFeature, itemFeature, setItemFeature }}>
         <Container {...restProps}>{children}</Container>
@@ -57,7 +57,7 @@ Card.Meta = function CardMeta({ children, ...restProps }) {
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
     const { setShowFeature, setItemFeature } = useContext(FeatureContext);
-
+    
     return (
         <Item
             onClick={() => {
@@ -86,14 +86,14 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
                 <FeatureClose onClick={() => setShowFeature(false)}>
                     <img src="/images/icons/close.png" alt="Close" />
                 </FeatureClose>
-
+                
                 <Group margin="30px 0" flexDirection="row" alignItems="center">
                     <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
                     <FeatureText fontWeight="bold">
                         {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
                     </FeatureText>
                 </Group>
-
+                
                 {children}
             </Content>
         </Feature>
