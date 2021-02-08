@@ -11,7 +11,10 @@ Something need to learn:
 
 MEMO:  
 37, 38, 39 are not working because Firebase. Not a big problem. Just remember to put it back.  
-40, 41, 42 are a group. Card Component.  I took out Font for stled.p in card.js.  
+40, 41, 42 are a group. Card Component.  I took out Font for stled.p in card.js.
+I checked some code, the problem is from system cannot fetch data. so, SlideRows always empty. (2/8)  
+
+
 
 
 # title(){
